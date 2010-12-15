@@ -27,6 +27,16 @@
   /* Hook for theme functions to inject header content: */
 	wp_head();
   ?>
+  
+  <script src="http://www.google.com/jsapi"></script> 
+  <script> 
+    /* Load the JQuery and SWFObject library through Google JSAPIs */
+    google.load("jquery", "1.4.4");
+    google.load("swfobject", "2.1");
+  </script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_url') . "/js/powered_by.js" ?>"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_url') . "/js/skin_effect.js" ?>"></script>
+  </script>
 </head>
 
 <body id="mccolin.com" <?php body_class(); ?>>

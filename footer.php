@@ -24,7 +24,7 @@
   </div>
 
   <div class="footnote">
-    Colin McCloskey is powered by lots of things, among them Diet Pepsi.<br/>
+    Colin McCloskey is powered by lots of things, among them <span id="powered-by">Diet Pepsi</span>.<br/>
     This website is powered by his fingers, 
     <a href="http://dreamhost.com/">a server somewhere</a>, and <a href="http://wordpress.org/">a popular blogging engine</a>.
   </div>
