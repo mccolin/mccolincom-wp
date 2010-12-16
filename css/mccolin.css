@@ -43,11 +43,13 @@ h1 a {
   text-decoration: none;
 }
 
-ol, ul, li {
-  list-style: disc outside none;
+ol, ul {
   padding: 0 1.5em 1em;
 }
-ol {
+ul, ul li {
+  list-style: disc outside none;
+}
+ol, ol li {
   list-style: decimal outside none;
 }
 
