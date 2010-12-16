@@ -33,11 +33,24 @@ function skinXMas() {
   setSiteGreeting("Ho! Ho! Ho!");
   setPoweredBy("Santa's leftover cookies and milk");
   setPhotoCredit("The Hanging of the Wreaths","http://www.flickr.com/photos/mccolin/2081231053/");
+  $(".content a").mouseenter(function(){
+    $(this).css("text-decoration","underline").css("color","#17320F");
+  }).mouseleave(function(){
+    $(this).css("text-decoration","none").css("color","#A00");
+  });
+  $(".access li a").mouseenter(function(){
+    $(this).css("background","rgba(0,0,0,0.5)").css("color","#FFF");
+  }).mouseleave(function(){
+    $(this).css("background","rgba(66,139,52,0.8)").css("color","#61CE3C");
+  });
+  $(".access li.current-menu-item a, .access li.current_page_parent a").mouseleave(function(){
+    $(this).css("background","rgba(170,0,0,0.75)").css("color","pink");
+  });
   return {
     "body": { "background": "url(http://farm3.static.flickr.com/2310/2081231053_acfb528196_o.jpg) fixed repeat-x 0 -250px" },
     "h1": { "background": "#A00", "color": "#FFF" },
     "h1, h1 a": { "color": "#FFF" },
-    ".access li a": { "background": "#000", "color": "#FFF" },
+    ".access li a": { "background": "rgba(66,139,52,0.8)", "color": "#61CE3C" },
     ".access li.current-menu-item a, .access li.current_page_parent a, .access li a:hover": { "background": "rgba(170,0,0,0.75)", "color": "pink"},
     ".content a": { "color": "#A00" },
     "#footer .footnote": {

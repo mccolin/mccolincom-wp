@@ -43,13 +43,13 @@ h1 a {
   text-decoration: none;
 }
 
-ol, ul {
+.content ol, .content ul {
   padding: 0 1.5em 1em;
 }
-ul, ul li {
+.content ul, .content ul li {
   list-style: disc outside none;
 }
-ol, ol li {
+.content ol, .content ol li {
   list-style: decimal outside none;
 }
 
@@ -64,7 +64,6 @@ ol, ol li {
 }
 #footer a {
   color: #FFF;
-  padding: 0.20em 0.4em;
   text-decoration: none;
 }
 #footer a:hover {
