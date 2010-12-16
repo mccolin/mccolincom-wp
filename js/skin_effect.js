@@ -12,6 +12,7 @@
 /**
  * Default skin effect */
 function skinDefault() {
+  setPhotoCredit("Future Leather Air Guitar", "http://www.flickr.com/photos/mccolin/553404266/");
   return {
     "body": {
       "background": "#617EDA url(http://farm2.static.flickr.com/1240/553404266_75cc79deda_o.jpg) fixed repeat-x -600px -150px",
@@ -29,13 +30,15 @@ function skinDefault() {
 
 /** Christmastime skin effect */
 function skinXMas() {
+  setSiteGreeting("Ho! Ho! Ho!");
   setPoweredBy("Santa's leftover cookies and milk");
+  setPhotoCredit("The Hanging of the Wreaths","http://www.flickr.com/photos/mccolin/2081231053/");
   return {
     "body": { "background": "url(http://farm3.static.flickr.com/2310/2081231053_acfb528196_o.jpg) fixed repeat-x 0 -250px" },
     "h1": { "background": "#A00", "color": "#FFF" },
     "h1, h1 a": { "color": "#FFF" },
     ".access li a": { "background": "#000", "color": "#FFF" },
-    ".access li.current-menu-item a, .access li.current_page_parent a": { "background": "rgba(170,0,0,0.75)", "color": "pink"},
+    ".access li.current-menu-item a, .access li.current_page_parent a, .access li a:hover": { "background": "rgba(170,0,0,0.75)", "color": "pink"},
     ".content a": { "color": "#A00" },
     "#footer .footnote": {
       "background": "rgba(255, 255, 255, 0.65)",
@@ -51,14 +54,39 @@ function skinXMas() {
 
 /** Halloweentime skin effect */
 function skinHalloween() {
+  setSiteGreeting("Boo!");
+  setPoweredBy("his perpetual fear of the impending zombie apocolypse");
+  setPhotoCredit("I Am A Zombie! Zom!","http://www.flickr.com/photos/mccolin/5265426886/");
+  $(".access li a").mouseenter(function(){
+    $(this).css("background","#000");
+  }).mouseleave(function(){
+    $(this).css("background","transparent");
+  });
+  $("#footer .access li a").mouseleave(function(){
+    $(this).css("background","rgba(80,80,80,0.65)");
+  });
+  $(".access li.current-menu-item a, .access li.current_page_parent a").mouseleave(function(){
+    $(this).css("background","#000").css("color","#FF4000");
+  });
+  
   return {
-    "body": {"background": "#000" }
+    "body": { "background": "url(http://farm6.static.flickr.com/5162/5265426886_2cc4e16cfb_o.jpg) fixed repeat-x 0 -400px" },
+    "h1": { "background": "rgba(255,64,0,0.75)", "color": "#FFF" },
+    "h1 a": { "color": "#FFF" },
+    ".access li a": { "color": "#FFF" },
+    "#footer .access li a": { "background": "rgba(80,80,80,0.65)" },
+    ".access li.current-menu-item a, .access li.current_page_parent a": { "background": "#000", "color": "#FF4000" },
+    "#footer .footnote": { "background": "rgba(80,80,80,0.65)", "padding":"0.5em", "margin-top":"1.5em", "width":"700px" },
+    ".content": { "background": "rgba(80,80,80,0.75)", "color":"#FFF" },
+    ".content h2": { "color": "#FF4000" },
+    ".content a": { "color": "#000" }
   };
 }
 
 
 /** Bosssstttonnn skin effect */
 function skinBoston() {
+  setPhotoCredit("BOSSSTTTOOOONNNNN!!!!!","http://www.flickr.com/photos/mccolin/2214776911/");
   return {
     "body": { "background": "url(http://farm3.static.flickr.com/2178/2214776911_76356529e0_o.jpg) fixed repeat-x -100px -250px" }
   };
@@ -67,6 +95,8 @@ function skinBoston() {
 
 /** Upclose Beard Action skin effect */
 function skinBeardy() {
+  setSiteGreeting("Ahhhh!!!");
+  setPhotoCredit("Beard at High Speeds","http://www.flickr.com/photos/mccolin/2376062537/");
   return {
     "body": { "background": "url(http://farm3.static.flickr.com/2271/2376062537_c5c7e23943_o.jpg) fixed repeat-x 0 -250px" },
     "h1": { "background": "#785032", "color": "#FFD700"},
@@ -78,6 +108,7 @@ function skinBeardy() {
 /** Me with my shades at the Exploratorium */
 function skinExploratorium() {
   setPoweredBy("those remarkably handsome Ray Bans");
+  setPhotoCredit("Stalking Near the Exploratorium", "http://www.flickr.com/photos/mccolin/5226415923/");
   return {
     "body": { "background": "url(http://farm6.static.flickr.com/5202/5226415923_8ae1a0e51e_o.jpg) fixed repeat-x -1200px -500px" },
     "#header .access li a": { "color": "#000" },
@@ -88,6 +119,8 @@ function skinExploratorium() {
 
 /** Me and a big 'ol beer skin effect */
 function skinBigBeer() {
+  setPhotoCredit("Did somebody say beer Friday!?", "http://www.flickr.com/photos/mccolin/5053804492/");
+  setSiteGreeting("Hey!");
   return {
     "body": { "background": "url(http://farm5.static.flickr.com/4141/5053804492_cae13e53a8_o.jpg) fixed repeat-x -50px -100px" },
     "h1": { "background": "#570400", "color": "#FFF" },
@@ -98,22 +131,61 @@ function skinBigBeer() {
 }
 
 
+/** Liz and I together around the week of our wedding */
+function skinWedding(now) {
+  setPoweredBy("Liz. She means everything to me!");
+  if ( now.getFullYear() > 2011 )
+    setSiteGreeting("It's My Anniversary!");
+  else
+    setSiteGreeting("I Got Married!");
+  setPhotoCredit("We're Super Cute, Too!", "http://www.flickr.com/photos/lizzyhart/1045536866/");
+  setPhotoCredit("LINER PICS!","http://www.flickr.com/photos/lizzyhart/497169538/");
+  $(".access li a").mouseenter(function(){
+    $(this).css("background","#C86023").css("color","#FFD700");
+  }).mouseleave(function(){
+    $(this).css("background","transparent").css("color","#FFF");
+  });
+  $("#footer .access li a").mouseleave(function(){
+    $(this).css("background","transparent").css("color","#000");
+  });
+  $(".access li.current-menu-item a, .access li.current_page_parent a").mouseleave(function(){
+    $(this).css("background","#C86023").css("color","#FFD700");
+  });
+  
+  return {
+    "body": { 
+      "background": "url(http://farm1.static.flickr.com/229/497169538_c5941751f2_o.jpg) repeat-x fixed -400px -600px",
+      "margin-top": "150px"
+    },
+    "h1": { "background": "#1F7047" },
+    "#footer .access li a": { "color": "#000" },
+    ".access li.current-menu-item a, .access li.current_page_parent a": { "background": "#C86023" },
+    "#footer .footnote": { "color": "#000" }
+  };
+}
+
+
 /**
  * Attach to document ready, and trigger the appropriate style cascade based
  * on various parameters */
 $(function() {
 
-  // Determine the skin function:
+  // Start with the default skin function:
   var skinFn = skinDefault;
   
-  // Use time and other variables to swap in different skin functions:
-  var test = new Date(2010, 11, 11, 0, 0) //, seconds, milliseconds);
+  // Capture the current date and time:
   var now = new Date();  // set to test for testing
-  //now = test;
+  
+  // To test date logic for a specifc date, override now:
+  //now = new Date(2012, 3, 2, 0, 0); //, seconds, milliseconds);
+
+  // Use time and other variables to swap in different skin functions:
   if (now.getMonth() == 11 && now.getDate() >= 12 && now.getDate() <= 25)
     skinFn = skinXMas;                        // Dec 12 through 25th
   else if (now.getMonth() == 9 && now.getDate() >= 24 && now.getDate() <= 31)
     skinFn = skinHalloween;                   // Week up to Halloween
+  else if (now.getMonth() == 3 && now.getDate() >= 2 && now.getDate() <= 8)
+    skinFn = skinWedding;                     // Week after our Wedding
   else if (now.getDay() == 0)
     skinFn = skinBoston;                      // Sundays
   else if (now.getDay() == 2)
@@ -124,13 +196,13 @@ $(function() {
     skinFn = skinExploratorium;               // Saturdays
   
   // Call the skin function to retrieve style selectors and attributes:
-  var styleAttr = skinFn();
+  var styleAttr = skinFn(now);
   
   // Cycle through the selectors and style attributes and set new properties:
   for (selector in styleAttr) {
-    attrs = styleAttr[selector];
+    var attrs = styleAttr[selector];
     for (property in attrs) {
-      value = attrs[property];
+      var value = attrs[property];
       $(selector).css(property, value);
     }
   }

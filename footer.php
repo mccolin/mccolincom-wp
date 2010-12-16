@@ -29,7 +29,14 @@
     <a href="http://dreamhost.com/">a server somewhere</a>, and <a href="http://wordpress.org/">a popular blogging engine</a>.
   </div>
 
+  <div id="photo-credit">
+    <span class="name">Mega-sized background photo probably from</span>
+    <span class="url"><a href="http://flickr.com/mccolin">Flickr</a></span>
+  </div>
+
 </div> <!--/footer-->
+
+
 
 <?php
   /* Footer hook for template action injection: */

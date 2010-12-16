@@ -42,7 +42,7 @@
 <body id="mccolin.com" <?php body_class(); ?>>
 
   <div id="header">
-	  <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Hi! I'm Colin McCloskey</a></h1>
+	  <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span id="site-greeting">Hi!</span> I'm Colin McCloskey</a></h1>
   	<div id="header-nav" class="access" role="navigation">
   		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
   	</div> <!--/#access-->
