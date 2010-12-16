@@ -43,6 +43,14 @@ h1 a {
   text-decoration: none;
 }
 
+ol, ul, li {
+  list-style: disc outside none;
+  padding: 0 1.5em 1em;
+}
+ol {
+  list-style: decimal outside none;
+}
+
 /** FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER **/
 
 #footer {
