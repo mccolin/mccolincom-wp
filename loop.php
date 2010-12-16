@@ -21,7 +21,16 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-  <div class="single content">
+  <?php
+    $post_categories = wp_get_post_categories( $post->ID );
+    $cats = array();
+    foreach($post_categories as $c){ 
+    	$cat = get_category( $c );
+    	$cats[] = "cat-".$cat->slug;
+    }
+    $cat_classes = join(" ",$cats);
+  ?>
+  <div class="single content <?php echo $cat_classes ?>">
     <h2><?php the_title(); ?></h2>
     <span class="dateline"><?php twentyten_posted_on(); ?></span>
     <span class="body">
