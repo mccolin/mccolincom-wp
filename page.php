@@ -18,7 +18,6 @@ get_header(); ?>
 
   <div class="page content">
     <h2><?php the_title(); ?></h2>
-    <span class="dateline"><?php twentyten_posted_on(); ?></span>
     <span class="body">
       <?php 
       if ( is_archive() || is_search() ) :
