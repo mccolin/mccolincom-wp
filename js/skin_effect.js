@@ -15,7 +15,7 @@ function skinDefault() {
   setPhotoCredit("Future Leather Air Guitar", "http://www.flickr.com/photos/mccolin/553404266/");
   return {
     "body": {
-      "background": "#617EDA url(http://farm2.static.flickr.com/1240/553404266_75cc79deda_o.jpg) fixed repeat-x -600px -150px",
+      "background": "#617EDA url(http://farm2.static.flickr.com/1240/553404266_75cc79deda_o.jpg) fixed repeat-x -600px -150px"
     },
     "h1": {
       "background": "#516009",
@@ -178,6 +178,30 @@ function skinWedding(now) {
 }
 
 
+
+/**
+ * Apply the named skin by applying the skin function callback
+ * passed to this function */
+function applySkin(skinFn, now) {
+  if (!now) { now = new Date(); }
+  
+  // Call the skin function to retrieve style selectors and attributes:
+  var styleAttr = skinFn(now);
+  
+  // Cycle through the selectors and style attributes and set new properties:
+  for (selector in styleAttr) {
+    var attrs = styleAttr[selector];
+    for (property in attrs) {
+      var value = attrs[property];
+      $(selector).css(property, value);
+    }
+  }
+
+  return(false);
+}
+
+
+
 /**
  * Attach to document ready, and trigger the appropriate style cascade based
  * on various parameters */
@@ -190,7 +214,7 @@ $(function() {
   var now = new Date();  // set to test for testing
   
   // To test date logic for a specifc date, override now:
-  //now = new Date(2012, 3, 2, 0, 0); //, seconds, milliseconds);
+  //now = new Date(2011, 9, 26, 0, 0); //, seconds, milliseconds);
 
   // Use time and other variables to swap in different skin functions:
   if (now.getMonth() == 11 && now.getDate() >= 12 && now.getDate() <= 25)
@@ -208,18 +232,7 @@ $(function() {
   else if (now.getDay() == 6)
     skinFn = skinExploratorium;               // Saturdays
   
-  // Call the skin function to retrieve style selectors and attributes:
-  var styleAttr = skinFn(now);
+  // Now that the time and skin name have been captured, apply the skin:
+  applySkin(skinFn, now);
   
-  // Cycle through the selectors and style attributes and set new properties:
-  for (selector in styleAttr) {
-    var attrs = styleAttr[selector];
-    for (property in attrs) {
-      var value = attrs[property];
-      $(selector).css(property, value);
-    }
-  }
-  
-  // $("body").css("background","url(http://farm3.static.flickr.com/2310/2081231053_acfb528196_o.jpg) repeat-x fixed");
-  // url("http://farm3.static.flickr.com/2310/2081231053_acfb528196_o.jpg") repeat-x fixed left -250px transparent
 });

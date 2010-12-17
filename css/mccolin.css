@@ -8,8 +8,8 @@
  
 
 body {
-  background: #617EDA url(http://farm2.static.flickr.com/1240/553404266_75cc79deda_o.jpg) fixed repeat-x -600px -150px;
-  background-position: fixed;
+  background: #617EDA;
+  /* Real background is set by skin_effect.js background: #617EDA url(http://farm2.static.flickr.com/1240/553404266_75cc79deda_o.jpg) fixed repeat-x -600px -150px; */
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 1.2em;
   font-weight: lighter;
@@ -21,12 +21,6 @@ body {
 }
 
 /** EVERY PAGE EVERY PAGE EVERY PAGE EVERY PAGE EVERY PAGE EVERY PAGE EVERY PAGE EVERY PAGE **/
-
-body {}
-
-body #header {
-  
-}
 
 h1 {
   background: #516009;
