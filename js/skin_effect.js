@@ -9,6 +9,20 @@
  * Dec 2010
  */
 
+/** There are elements to our skinning that require querystring access */
+var urlParams = {};
+(function () {
+  var e,
+    a = /\+/g,  // Regex for replacing addition symbol with a space
+    r = /([^&;=]+)=?([^&;]*)/g,
+    d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+    q = window.location.search.substring(1);
+
+  while (e = r.exec(q))
+    urlParams[d(e[1])] = d(e[2]);
+})();
+
+
 /**
  * Default skin effect */
 function skinDefault() {
@@ -231,6 +245,11 @@ $(function() {
     skinFn = skinBigBeer;                     // Fridays
   else if (now.getDay() == 6)
     skinFn = skinExploratorium;               // Saturdays
+    
+  // Check if there is an admin skin override and apply it:
+  if ( skinName = urlParams["skin"] ) {
+    skinFn = eval("skin"+skinName);
+  }
   
   // Now that the time and skin name have been captured, apply the skin:
   applySkin(skinFn, now);
