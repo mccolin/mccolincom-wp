@@ -151,7 +151,9 @@ body.home h1 {
   background-image: url(../images/twitter_t.png);
   background-position: top right;
   background-repeat: no-repeat;
-  border:5px solid rgba(79, 201, 255, 0.45);
+  border: 5px solid rgba(79, 201, 255, 0.45);
+  border-radius: 0 20px 0 20px;
+  -moz-border-radius: 0 20px 0 20px;
 }
 
 body.home .content {
