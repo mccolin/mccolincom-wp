@@ -144,6 +144,9 @@ body.home h1 {
   width: 700px;
 }
 
+.content img.alignleft { margin: auto 1.0em 0.25em auto; }
+.content img.alignright { margin: auto auto 0.25em 1.0em; }
+
 .content.cat-twittering {
   background-image: url(../images/twitter_t.png);
   background-position: top right;
