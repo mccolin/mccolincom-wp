@@ -201,6 +201,9 @@ body.home .content p {}
 }
 
 
-
+blockquote {
+  font-style:italic;
+  padding:0.5em 1.5em;
+}
 
 
