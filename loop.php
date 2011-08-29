@@ -49,7 +49,6 @@
   	    <?php mccolin_cat_list(); ?>
   	    <?php mccolin_tag_list(); ?>
   	    <?php mccolin_permalink(); ?>
-  	    <?php twentyten_posted_in(); ?>
   			<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
   	  </span>
   	</div> <!--/#content-body-->

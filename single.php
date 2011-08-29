@@ -11,25 +11,31 @@ get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
+
   <div class="single content">
-    <h2><?php the_title(); ?></h2>
-    <span class="dateline"><?php twentyten_posted_on(); ?></span>
-    <span class="body">
-      <?php 
-      if ( is_archive() || is_search() ) :
-        the_excerpt();
-      else :
-        the_content();
-      endif;
-      ?>
-	  </span>
-	  <span class="metaline">
-	    <?php twentyten_posted_in(); ?>
-			<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
-	  </span>
+    <div class="content-title">
+      <h2><?php the_title(); ?></h2>
+    </div>
+    <div class="content-body">
+      <h2><?php the_title(); ?></h2>
+      <span class="dateline"><?php twentyten_posted_on(); ?></span>
+      <span class="body">
+        <?php 
+        if ( is_archive() || is_search() ) :
+          the_excerpt();
+        else :
+          the_content();
+        endif;
+        ?>
+  	  </span>
+  	  <span class="metaline">
+  	    <?php twentyten_posted_in(); ?>
+  			<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
+  	  </span>
 	  
-	  <div class="comments-container">
-		<?php comments_template( '', true ); ?>
+  	  <div class="comments-container">
+  		<?php comments_template( '', true ); ?>
+  		</div>
 		</div>
 	</div>
 

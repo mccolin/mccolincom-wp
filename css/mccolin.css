@@ -10,7 +10,8 @@
 body {
   background: #617EDA;
   /* Real background is set by skin_effect.js background: #617EDA url(http://farm2.static.flickr.com/1240/553404266_75cc79deda_o.jpg) fixed repeat-x -600px -150px; */
-  font-family: Tuffy,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  /* font-family: Tuffy,"Helvetica Neue",Helvetica,Arial,sans-serif; */
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   padding: 0;
 }
@@ -82,7 +83,7 @@ h1 a:hover {
 }
 #footer .footnote {
   color: #FFF;
-  font-size: 11px;
+  font-size: 12px;
   padding: 1.0em 0.5em;  
 }
 #footer a {
@@ -213,7 +214,7 @@ body.home h1 {
 
 
 .content {
-  margin: 0 0 25px 50px;
+  margin: 0 0 50px 50px;
   width: 700px;
 }
 
@@ -253,6 +254,21 @@ body.home .content {
   font-size: 22px;
 }
 
+.content-body .dateline, .content-body .metaline {
+  font-size: 12px; 
+  font-weight: normal;
+}
+
+.content-body .dateline a, .content-body .metaline a{
+  color: #999 !important;
+  font-weight: normal !important;
+}
+.content-body .dateline a:hover, .content-body .metaline a:hover{
+  color: #FFD700 !important;
+}
+
+
+
 .content-body .dateline {
   background: #333;
   color: white;
@@ -265,23 +281,32 @@ body.home .content {
   text-transform: uppercase;
 }
 
-.content-body .dateline, .content-body .metaline {
-  font-size: 0.8em; 
-  font-weight: normal;
+.content-body .metaline {
+  background: #333;
+  bottom: -20px;
+  color: #FFF;
+  display: block;
+  height: 20px;
+  margin-top: 20px;
+  padding: 0 4px;
+  position: absolute;
+  left: 0;
 }
 
-.content p {
+
+
+.content-body p {
   margin-bottom: 0.5em;
 }
-body.home .content p {}
+body.home .content-body p {}
 
-.content a {
+.content-body a {
   color: #617EDA;
   font-weight: bold;
   padding: 0.05em 0.1em;
   text-decoration: none;
 }
-.content a:hover {
+.content-body a:hover {
   color: #00A;
   text-decoration: none;
 }
