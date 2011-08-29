@@ -211,22 +211,38 @@ body.home h1 {
   margin: 0 0 1.0em;
 }
 
+
 .content {
+  margin: 0 0 25px 50px;
+  width: 700px;
+}
+
+.content-title {
+  font-family: MuseoSlab;
+  font-size: 22px;
+  color: #FFF;
+  padding: 0;
+  text-shadow: 0 0 3px #FFF;
+}
+
+.content-body {
   background: rgba(255,255,255,0.8);
-  border: 5px solid rgba(255,255,255,0.0);
+  border: none;
+  border-bottom: 5px solid #333;
+  border-top: 5px solid #333;
   color: #000;
   line-height: 1.5em;
-  margin: 0 0 2.0em 50px;
+  margin: 0;
   padding: 0.4em 0.5em;
+  position: relative;
   width: 700px;
 }
 
 .content img.alignleft { margin: auto 1.0em 0.25em auto; }
 .content img.alignright { margin: auto auto 0.25em 1.0em; }
 
-.content.cat-twittering {
-  border: none;
-  border-left: 5px solid rgba(79, 201, 255, 0.45);
+.content.cat-twittering .content-body {
+  border-top: 5px solid rgba(79, 201, 255, 0.45);
 }
 
 body.home .content {
@@ -236,7 +252,20 @@ body.home .content {
   color: #333;
   font-size: 22px;
 }
-.content .dateline, .content .metaline {
+
+.content-body .dateline {
+  background: #333;
+  color: white;
+  display: block;
+  height: 20px;
+  padding: 0 4px;
+  position: absolute;
+  right: 0;
+  top: -24px;
+  text-transform: uppercase;
+}
+
+.content-body .dateline, .content-body .metaline {
   font-size: 0.8em; 
   font-weight: normal;
 }

@@ -455,3 +455,42 @@ function twentyten_posted_in() {
 	);
 }
 endif;
+
+
+
+/*********************************************************************************/
+/*********************************************************************************/
+if (!defined("MCCOLINCOM_FUNCTIONS")):
+  define("MCCOLINCOM_FUNCTIONS", true);
+  
+  /** Display a list of post categories with link */
+  function mccolin_cat_list() {
+    if ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
+      printf("Topics: " . get_the_category_list(", "));
+    }
+  }
+  
+  /** Display a list of post tags with links */
+  function mccolin_tag_list() {
+    $tag_list = get_the_tag_list( '', ', ' );
+    if ($tag_list) {
+      printf("Tags: " . $tag_list);
+    }
+  }
+  
+  /** Display the permalink to this post */
+  function mccolin_permalink() {
+    printf('<a href="' . get_permalink() . '" title="Permalink to ' . the_title_attribute('echo=0') . '">Link</a>');
+  }
+  
+endif;
+/*********************************************************************************/
+/*********************************************************************************/
+
+
+
+
+
+
+
+

@@ -31,21 +31,28 @@
     $cat_classes = join(" ",$cats);
   ?>
   <div class="single content <?php echo $cat_classes ?>">
-    <h2><?php the_title(); ?></h2>
-    <span class="dateline"><?php twentyten_posted_on(); ?></span>
-    <span class="body">
-      <?php 
-      if ( is_archive() || is_search() ) :
-        the_excerpt();
-      else :
-        the_content();
-      endif;
-      ?>
-	  </span>
-	  <span class="metaline">
-	    <?php twentyten_posted_in(); ?>
-			<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
-	  </span>
+    <div class="content-title">
+      <h2><?php the_title(); ?></h2>
+    </div>
+    <div class="content-body">
+      <span class="dateline"><?php twentyten_posted_on(); ?></span>
+      <span class="body">
+        <?php 
+        if ( is_archive() || is_search() ) :
+          the_excerpt();
+        else :
+          the_content();
+        endif;
+        ?>
+  	  </span>
+  	  <span class="metaline">
+  	    <?php mccolin_cat_list(); ?>
+  	    <?php mccolin_tag_list(); ?>
+  	    <?php mccolin_permalink(); ?>
+  	    <?php twentyten_posted_in(); ?>
+  			<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
+  	  </span>
+  	</div> <!--/#content-body-->
 	</div>
 	
 <?php endwhile; // end of the loop. ?>
