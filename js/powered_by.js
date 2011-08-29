@@ -42,14 +42,9 @@ function setSiteGreeting(greeting) {
  * the photo credit in the very lower right corner of the footer with
  * a name and link to the photo hosted elsewhere on the web */
 function setPhotoCredit(photoName, photoUrl) {
-  $("#photo-credit .name").html(photoName);
-  
-  var link = "<a href=\""+photoUrl+"\">SERVICE</a>";
-  if (photoUrl.indexOf("flickr.com") >= 0) link = link.replace("SERVICE","View on Flickr");
-  else {
+  var link = "<a href=\""+photoUrl+"\">"+photoName+"</a>";
+  if (! photoUrl.indexOf("flickr.com") >= 0)
     link = link.replace(photoUrl, "http://flickr.com/mccolin");
-    link = link.replace("SERVICE", "View Flickr");
-  }
   
   $("#photo-credit .url").html(link);
 }

@@ -11,6 +11,7 @@
  */
 ?>
 
+<div id="footer-wrapper">
 <div id="footer">
 
   <div id="footer-widgets">
@@ -30,11 +31,11 @@
   </div>
 
   <div id="photo-credit">
-    <span class="name">Mega-sized background photo probably from</span>
     <span class="url"><a href="http://flickr.com/mccolin">Flickr</a></span>
   </div>
 
-</div> <!--/footer-->
+</div> <!--/#footer-->
+</div> <!--/#footer-wrapper-->
 
 
 

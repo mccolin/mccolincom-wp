@@ -2,13 +2,12 @@
 Theme Name: McColinCom
 Theme URI: http://mccolin.com
 Description: A Wordpress theme for my personal website and blog
-Version: 0.9
+Version: 1.0
 Author: Colin McCloskey
-Author URI: http://colinmccloskey.com
+Author URI: http://mccolin.com
 Tags: colin, mccloskey, basic, personal
 */
 
 @import "css/reset.css";
-@import "css/typography.css";
 @import "css/layout.css";
 @import "css/mccolin.css";

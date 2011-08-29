@@ -1,72 +1,66 @@
+/*
+ * McCOLIN.COM
+ * Typography and Fonts
+ *
+ * Colin McCloskey
+ * Aug 2011
+ */
 
-/* TYPOGRAPHY */
-/* ----------------------------------------- */
+/****************************************************** MuseoSlab for Headings ***/
+@font-face {
+  font-family: 'MuseoSlab';
+  src: url('../fonts/MuseoSlab500/Museo_Slab_500-webfont.eot');
+  src: url('../fonts/MuseoSlab500/Museo_Slab_500-webfont.eot?iefix') format('eot'),
+       url('../fonts/MuseoSlab500/Museo_Slab_500-webfont.woff') format('woff'),
+       url('../fonts/MuseoSlab500/Museo_Slab_500-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSlab500/Museo_Slab_500-webfont.svg#webfontyumMOUTD') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-h1, h2, h3, h4, h5, h6 { font-weight:bold } /* This helps to identify headings at the initial build stage, so I thought it'd be useful to have it */
-.alert { background:red; color:white } /* 'alert' has a basic style, since it's useful to have it standing out for testing purposes.
 
 
+/********************************************************* Tuffy for Body Text ***/
+@font-face {
+  font-family: 'Tuffy';
+  src: url('../fonts/Tuffy/Tuffy-webfont.eot');
+  src: url('../fonts/Tuffy/Tuffy-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Tuffy/Tuffy-webfont.woff') format('woff'),
+       url('../fonts/Tuffy/Tuffy-webfont.ttf') format('truetype'),
+       url('../fonts/Tuffy/Tuffy-webfont.svg#TuffyRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* Font stack options
+@font-face {
+  font-family: 'TuffyItalic';
+  src: url('../fonts/Tuffy/Tuffy_Italic-webfont.eot');
+  src: url('../fonts/Tuffy/Tuffy_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Tuffy/Tuffy_Italic-webfont.woff') format('woff'),
+       url('../fonts/Tuffy/Tuffy_Italic-webfont.ttf') format('truetype'),
+       url('../fonts/Tuffy/Tuffy_Italic-webfont.svg#TuffyItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-	The following represents a list of font stacks, as recommended by Nathan Ford in
-	http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
+@font-face {
+  font-family: 'TuffyBold';
+  src: url('../fonts/Tuffy/Tuffy_Bold-webfont.eot');
+  src: url('../fonts/Tuffy/Tuffy_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Tuffy/Tuffy_Bold-webfont.woff') format('woff'),
+       url('../fonts/Tuffy/Tuffy_Bold-webfont.ttf') format('truetype'),
+       url('../fonts/Tuffy/Tuffy_Bold-webfont.svg#TuffyBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-	I've added inverted commas around the relevant family names to ensure compatibility.
-	p = balanced for paragraphs or body copy
-	t = balanced for headlines or titles
-
-	- - - -
-
-Arial, "Helvetica Neue", Helvetica, sans-serif - p, t
-
-Baskerville, "Times New Roman", Times, serif - p
-Baskerville, "Times, Times New Roman", serif - t
-
-Cambria, Georgia, Times, "Times New Roman", serif - p, t
-"Century Gothic", "Apple Gothic", sans-serif - p, t
-
-Consolas, "Lucida Console", Monaco, monospace - p, t
-
-"Copperplate Light", "Copperplate Gothic Light", serif - p, t
-
-"Courier New", Courier, monospace - p, t
-
-"Franklin Gothic Medium", "Arial Narrow Bold", Arial, sans-serif - p, t
-
-Futura, "Century Gothic", "Apple Gothic", sans-serif - p, t
-
-Garamond, "Hoefler Text", "Times New Roman", Times, serif - p
-Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif - t
-
-Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif - p
-Geneva, Verdana, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif - t
-
-Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif - p
-Georgia, Times, "Times New Roman", serif - t
-
-GillSans, Calibri, Trebuchet, sans-serif - p
-GillSans, Trebuchet, Calibri, sans-serif - t
-
-"Helvetica Neue", Arial, Helvetica, sans-serif - p
-Helvetica, "Helvetica Neue", Arial, sans-serif - t
-
-Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif - p, t
-
-"Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif - p, t
-
-Palatino, "Palatino Linotype", Georgia, Times, "Times New Roman", serif - p
-Palatino, "Palatino Linotype", "Hoefler Text", Times, "Times New Roman", serif - t
-
-Tahoma, Geneva, Verdana - p
-Tahoma, Verdana, Geneva - t
-
-Times, "Times New Roman", Georgia, serif - p, t
-
-Trebuchet, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif - p
-Trebuchet, Tahoma, Arial, sans-serif - t
-
-Verdana, Geneva, Tahoma, sans-serif - p
-Verdana, Tahoma, Geneva, sans-serif - t
-
-*/
+@font-face {
+  font-family: 'TuffyBoldItalic';
+  src: url('../fonts/Tuffy/Tuffy_Bold_Italic-webfont.eot');
+  src: url('../fonts/Tuffy/Tuffy_Bold_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Tuffy/Tuffy_Bold_Italic-webfont.woff') format('woff'),
+       url('../fonts/Tuffy/Tuffy_Bold_Italic-webfont.ttf') format('truetype'),
+       url('../fonts/Tuffy/Tuffy_Bold_Italic-webfont.svg#TuffyBoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
