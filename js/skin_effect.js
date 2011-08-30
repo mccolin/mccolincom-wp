@@ -228,7 +228,7 @@ $(function() {
   var now = new Date();  // set to test for testing
   
   // To test date logic for a specifc date, override now:
-  //now = new Date(2011, 9, 26, 0, 0); //, seconds, milliseconds);
+  now = new Date(2011, 7, 29, 0, 0); //, seconds, milliseconds);
 
   // Use time and other variables to swap in different skin functions:
   if (now.getMonth() == 11 && now.getDate() >= 12 && now.getDate() <= 25)

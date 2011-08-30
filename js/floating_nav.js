@@ -152,19 +152,22 @@ $(document).ready(function() {
 
 
 $(document).ready(function(){
-  // Capture all of the sections of the current page:
   var sections = new Array();
-  $(".single.content").each(function(i, e){
-    var h2 = $(this).find(".content-title h2");
-    if (h2) {
-      var title = h2.html();
-      var href = "page-section-"+i;
-      h2.html(title+"<a name=\""+href+"\">&nbsp;</a>");
-      $("#toc").append("<li class=\"section-link\"><a href=\"#"+href+"\">"+title+"</a></li>");
-      console.log("TOC link to '"+title+"' added");
-    }
-
+  $(".content").find("h1,h2,h3,h4,h5,h6").each(function(i, e){
+    sections.push( $(this) );
   });
+  if (sections.length <= 0)
+    $("#toc").hide();
+  else {
+    for (var i=0; i<sections.length; i++) {
+      console.log("Creating the link for section with index "+1);
+      var section = sections[i];
+      var title = section.html();
+      var href = "page-section-"+(i+1);
+      section.html(title+"<a name=\""+href+"\">&nbsp;</a>");
+      $("#toc").append("<li class=\"section-link\"><a href=\"#"+href+"\">"+title+"</a></li>");
+    }
+  }
   
   
 });

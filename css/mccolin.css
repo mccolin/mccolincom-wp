@@ -173,6 +173,7 @@ ul#toc {
   text-align: right;
   top: 0;
   right: 0;
+  width: 150px;
 }
 ul#toc h3 {
   font-family: MuseoSlab;
@@ -196,7 +197,7 @@ ul#toc li.sected a {
 }
 ul#toc li:hover a {
   color: #FFF;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
@@ -249,7 +250,15 @@ body.home h1 {
 }
 
 body.home .content {
+  background: rgba(255, 255, 255, 0.6);
+  border-top: 5px solid #333;
+  font-size: 17px;
+  line-height: 1.5em;
+  padding: 20px;
   width: 550px;
+}
+body.home .content p {
+  margin-bottom: 20px;
 }
 .content h2 {
   color: #333;
