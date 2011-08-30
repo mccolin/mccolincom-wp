@@ -184,17 +184,19 @@ ul#toc li {
   display: block;
   padding: 2px;
 }
-ul#toc li:hover {
+ul#toc li a {
+  color: #999;
+  text-decoration: none;
+}
+ul#toc li.selected, ul#toc li:hover {
   background: #666;
+}
+ul#toc li.sected a {
+  color: #FFF;
 }
 ul#toc li:hover a {
   color: #FFF;
   text-decoration: underline;
-}
-
-ul#toc li a {
-  color: #999;
-  text-decoration: none;
 }
 
 

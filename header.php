@@ -24,6 +24,7 @@
   
   <!-- JQuery and Site JavaScript -->
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_url') . "/js/floating_nav.js" ?>"></script>
   <script type="text/javascript" src="<?php echo get_bloginfo('template_url') . "/js/powered_by.js" ?>"></script>
   <script type="text/javascript" src="<?php echo get_bloginfo('template_url') . "/js/skin_effect.js" ?>"></script>
 
@@ -47,11 +48,7 @@
     	
     	<ul id="toc">
     	  <h3>On this Page</h3>
-    	  <li><a href="#article1">Recent Article 1</a></li>
-    	  <li><a href="#article2">Another Article Recently Seen</a></li>
-    	  <li><a href="#article3">Something Else to Look At</a></li>
-    	  <li><a href="#article4">Tweetings</a></li>
-    	  <li><a href="#article5">Stuff and Things</a></li>
+    	  <!-- Programmatically added: <li><a href="#article1">Recent Article 1</a></li> -->
   	  </ul>
     	
   	</div> <!--/#header-->
